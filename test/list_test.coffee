@@ -1,30 +1,20 @@
-expect = require('chai').expect
+require './helper'
 
-Robot = require('hubot/src/robot')
 TextMessage = require('hubot/src/message').TextMessage
 
 describe 'list', ->
-  robot = null
-  user = null
-  adapter = null
+  {robot, user, adapter} = {}
 
-  beforeEach (done) ->
-    robot = new Robot(null, 'mock-adapter', false, 'hubot')
+  shared_context.robot_is_running (ret) ->
+    {robot, user, adapter} = ret
 
-    robot.adapter.on 'connected', ->
-      require('../scripts/list')(robot)
-      user = robot.brain.userForId '1',
-        name: 'mocha'
-        room: '#mocha'
-      adapter = robot.adapter
-      done()
-    robot.run()
-
-  afterEach -> robot.shutdown()
+  beforeEach ->
+    require('../scripts/list')(robot)
 
   it 'responds "command list"', (done) ->
     adapter.on 'send', (envelope, strings) ->
       expect(envelope.user.name).to.equal('mocha')
       expect(strings[0]).to.equal('comming soon')
-      done()
+    , done
+
     adapter.receive(new TextMessage(user, 'hubot list'))
