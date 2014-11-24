@@ -6,7 +6,7 @@
 
 # コマンドリスト
 COMMAND_LIST = [
-  'onochrome show slack_bot pulls - monochromeのリポジトリのpull request一覧を表示する',
+  'monochrome show slack_bot pulls - monochromeのリポジトリのpull request一覧を表示する',
 ]
 
 module.exports = (robot) ->
