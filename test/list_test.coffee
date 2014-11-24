@@ -14,7 +14,8 @@ describe 'list', ->
   it 'responds "command list"', (done) ->
     adapter.on 'send', (envelope, strings) ->
       expect(envelope.user.name).to.equal('mocha')
-      expect(strings[0]).to.equal('comming soon')
+      # 以下の文字列から始まっていればOK
+      expect(strings[0]).to.have.string('モノクロームのコマンド一覧')
     , done
 
     adapter.receive(new TextMessage(user, 'hubot list'))

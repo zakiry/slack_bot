@@ -4,6 +4,17 @@
 # Commands:
 #   hubot list - Reply with list
 
+# コマンドリスト
+COMMAND_LIST = [
+  'onochrome show slack_bot pulls - monochromeのリポジトリのpull request一覧を表示する',
+]
+
 module.exports = (robot) ->
   robot.respond /list/i, (msg) ->
-    msg.send 'comming soon'
+    # 出力生成
+    str = 'モノクロームのコマンド一覧\n'
+    for command in COMMAND_LIST
+      str += command + '\n'
+
+    # 出力
+    msg.send str
