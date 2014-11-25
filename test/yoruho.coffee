@@ -1,3 +1,11 @@
+# useFakeTimersの挙動が不明なのでcronのテストは省略
+# message送る程度なので、必要になったらやる
+#
+# 2つ同時にcronを走らせた時に、useFakeTimersの使い方がわからない
+# 2つとも同じ時刻を見ている気がする？
+#
+###
+
 require './helper'
 
 describe 'yoruho', ->
@@ -24,4 +32,4 @@ describe 'yoruho', ->
       expect(strings[0]).to.equal('よるほー')
     , done()
     clock.tick(1000)
-
+###
