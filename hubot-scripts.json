@@ -1,2 +1,2 @@
-["github-pulls.coffee", "github-pull-request-notifier.coffee"]
+["github-pulls.coffee", "github-pull-request-notifier.coffee", "redis-brain.coffee"]
 
