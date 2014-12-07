@@ -6,7 +6,6 @@
 
 # 画像url
 YUYUYU  = "http://shingeki.tv/yuyuyu.tv/special/img_icon/"
-SASUONI = "mahouka.jp/img/special/message/"
 
 module.exports = (robot) ->
   # ゆゆゆアイコン
@@ -21,12 +20,3 @@ module.exports = (robot) ->
     # 出力
     msg.send str
 
-  # 魔法科画像
-  robot.hear /^(sasuoni|さすおに)$/i, (msg) ->
-    # 画像番号
-    num = Math.floor(Math.random() * 17) + 1
-    num_str = ( "00" + num ).slice(-2)
-    str = "#{SASUONI}mahouka_msg#{num_str}.jpg"
-
-    # 出力
-    msg.send str
