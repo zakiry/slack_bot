@@ -1,8 +1,8 @@
 # Description:
-#   hubot show sasuoni images
+#   hubot show zoi images
 #
 # Commands:
-#   hubot show sasuoni images when message contain word 'sasuoni'
+#   hubot show zoi images when message contain word 'zoi'
 #
 
 fs = require('fs');
