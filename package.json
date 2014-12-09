@@ -5,6 +5,7 @@
   "author": "zakiry",
   "description": "robot for slack",
   "dependencies": {
+    "cheerio": "^0.18.0",
     "cron": "^1.0.5",
     "githubot": "^1.0.0-beta2",
     "hubot": "^2.9.3",
@@ -20,7 +21,8 @@
     "hubot-scripts": "^2.5.16",
     "hubot-shipit": "^0.1.1",
     "hubot-slack": "^2.2.0",
-    "hubot-youtube": "^0.1.2"
+    "hubot-youtube": "^0.1.2",
+    "request": "^2.49.0"
   },
   "engines": {
     "node": "0.10.x"
