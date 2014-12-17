@@ -18,11 +18,11 @@ describe 'vote', ->
     , done
     adapter.receive(new TextMessage(user, 'name++'))
 
-  it 'responds "@name:++"', (done) ->
+  it 'responds "@name: ++"', (done) ->
     adapter.on 'send', (envelope, strings) ->
       expect(strings[0]).to.have.string('name: 1')
     , done
-    adapter.receive(new TextMessage(user, '@name:++'))
+    adapter.receive(new TextMessage(user, '@name: ++'))
 
   it 'deny self vote', (done) ->
     adapter.on 'send', (envelope, strings) ->
