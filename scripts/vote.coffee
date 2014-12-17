@@ -42,14 +42,14 @@ module.exports = (robot) ->
 
     # 爆撃成功
     changeScore(name, -source[name])
-    return "success!"
+    return "success! 10pt消費します"
 
-  robot.hear /^(.+)\+\+$/i, (msg) ->
+  robot.hear /^@*(.+?):*\+\+$/i, (msg) ->
     name = msg.match[1]
     result_msg = addScore(name, msg.message.user.name)
     msg.send result_msg
 
-  robot.hear /^(.+):bomb:$/i, (msg) ->
+  robot.hear /^@*(.+):*:bomb:$/i, (msg) ->
     name = msg.match[1]
     result_msg = resetScore(name, msg.message.user.name)
     msg.send result_msg
