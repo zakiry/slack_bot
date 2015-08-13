@@ -16,6 +16,6 @@ module.exports = (robot) ->
   new CronJob
     cronTime:'0 0 11-18 * * 1-5'
     onTick: ->
-      robot.send {room: '#healthy'}, '@channel 散歩の時間です'
+      robot.send {room: '#healthy'}, '<!channel> 散歩の時間です'
     start: true
 
