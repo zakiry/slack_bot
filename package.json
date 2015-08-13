@@ -7,7 +7,7 @@
   "dependencies": {
     "cheerio": "^0.18.0",
     "cron": "^1.0.5",
-    "githubot": "^1.0.0-beta2",
+    "githubot": "^1.0.0",
     "hubot": "^2.9.3",
     "hubot-diagnostics": "0.0.1",
     "hubot-google-images": "^0.1.0",
